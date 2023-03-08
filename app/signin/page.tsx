@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import signIn from '@/src/firebase/signin'
+import signIn from '../server/firebase/signin'
 import { useRouter } from 'next/navigation'
 
 function Page() {
@@ -29,7 +29,7 @@ function Page() {
                 <form onSubmit={handleForm} className='form'>
                     <label htmlFor="email">
                         <p>Email</p>
-                        <input onChange={(e) => setPassword(e.target.value)} type="email" name='email' id='email' placeholder='example@mail.ru' />
+                        <input onChange={(e) => setEmail(e.target.value)} type="email" name='email' id='email' placeholder='example@mail.ru' />
                     </label>
                     <label htmlFor="password">
                         <p>Password</p>
